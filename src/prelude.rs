@@ -1,2 +1,2 @@
-pub use crate::moving_circle::*;
-pub use crate::polygon::*;
+pub use crate::sketches::moving_circle::*;
+pub use crate::sketches::polygon::*;
