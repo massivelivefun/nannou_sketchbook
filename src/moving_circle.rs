@@ -4,16 +4,16 @@ pub fn moving_circle_main() {
     nannou::app(moving_circle_model).update(moving_circle_update).run();
 }
 
-pub struct MovingCircleModel {
+struct MovingCircleModel {
     pub _window: window::Id,
 }
 
-pub fn moving_circle_model(app: &App) -> MovingCircleModel {
+fn moving_circle_model(app: &App) -> MovingCircleModel {
     let _window = app.new_window().view(moving_circle_view).build().unwrap();
     MovingCircleModel { _window }
 }
 
-pub fn moving_circle_view(app: &App, _model: &MovingCircleModel, frame: Frame) {
+fn moving_circle_view(app: &App, _model: &MovingCircleModel, frame: Frame) {
     let draw = app.draw();
     draw.background().color(PLUM);
 
@@ -29,4 +29,4 @@ pub fn moving_circle_view(app: &App, _model: &MovingCircleModel, frame: Frame) {
     draw.to_frame(app, &frame).unwrap();
 }
 
-pub fn moving_circle_update(_app: &App, _model: &mut MovingCircleModel, _update: Update) {}
+fn moving_circle_update(_app: &App, _model: &mut MovingCircleModel, _update: Update) {}
